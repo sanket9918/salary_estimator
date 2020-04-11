@@ -32,7 +32,8 @@ class About extends Component {
                                             <p className="text-white" style={{paddingBottom:"3em"}}>
                                                 An app to estimate the salary based on the years of experience                  </p>
 
-                                                
+                                                <p className="text-white" style={{paddingBottom:"3em"}}>
+                                               By Sanket Mohapatra                  </p>
                                         </center>
                                     </div>
                                 </Col>
