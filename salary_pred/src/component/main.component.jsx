@@ -17,7 +17,7 @@ class Main extends Component {
         const value = event.target.value;
         const name = event.target.name;
         var formData = this.state.formData;
-        formData[name] = value;
+        formData[name] = value;        
         this.setState({
             formData
         });
@@ -107,7 +107,7 @@ class Main extends Component {
                                             {result === "" ? null :
                                                 (<Row>
                                                     <Col className="result-container" style={{marginTop:"1em"}}>
-                                                        <h5 id="result">The predicted salary is <b>{result}</b> (in dollars) </h5>
+                                                        <h5 id="result"><b>{result}</b></h5>
                                                     </Col>
                                                 </Row>)
                                             }

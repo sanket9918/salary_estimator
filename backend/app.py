@@ -42,12 +42,13 @@ class MainClass(Resource):
 		try: 
 			formData = request.json
 			data = [val for val in formData.values()]
+		
 			prediction = regressor.predict(np.array(data,dtype=float).reshape(-1,1))
             
 			response = jsonify({
 				"statusCode": 200,
 				"status": "Prediction made",
-				"result": str(prediction[0].round(2))
+				"result": "The predicted salary (in dollars) :  "+str(prediction[0].round(2))
 				})
 			response.headers.add('Access-Control-Allow-Origin', '*')
 			return response
@@ -55,5 +56,6 @@ class MainClass(Resource):
 			return jsonify({
 				"statusCode": 500,
 				"status": "Could not make prediction",
+				"result": "Please review your response and try again",
 				"error": str(error)
 			})
