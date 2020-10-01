@@ -60,7 +60,7 @@ class Main extends Component {
         const result = this.state.result;
         return (
             <>
-                <div className='position-relative'>
+                <div className='position-relative main-content'>
                     <section className="section section-lg section-hero section-shaped">
                         {/* Background circles */}
                         <div className="shape shape-style-1 shape-default">

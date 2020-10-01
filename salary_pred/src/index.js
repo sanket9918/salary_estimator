@@ -12,6 +12,8 @@ import allReducer from './redux/rootReducer'
 import "../src/assets/vendor/nucleo/css/nucleo.css";
 import "../src/assets/vendor/font-awesome/css/font-awesome.min.css";
 import "../src/assets/scss/argon-design-system-react.scss";
+import "../src/assets/scss/my-style.scss";
+
 
 const store = createStore(allReducer , window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
