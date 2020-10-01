@@ -12,13 +12,7 @@ function App() {
   // const dispatch = useDispatch();
   return (
     <>
-      <Main />
-      {/* <div style={{ margin: `auto`, textAlign: `center` }}>
-        <h3>Counter = {counter} from the functional component</h3>
-        <button onClick={() => { dispatch(increment()) }}>+</button>
-        <button onClick={() => { dispatch(decrement()) }}>-</button>
-        <h3>Another container to display the states : {counter}</h3>
-      </div> */} 
+      <Main />     
     <About />
     </>
   );
