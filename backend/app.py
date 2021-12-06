@@ -43,13 +43,21 @@ class MainClass(Resource):
             formData = request.json
             data = [val for val in formData.values()]
 
+            for val in data:
+                if(val < 0):
+                    return jsonify({
+                        "statusCode": 500,
+                        "status": "Prediction cannot be made",
+                        "result": "Some negative values are found in the data provided"
+                    })
+
             prediction = regressor.predict(
                 np.array(data, dtype=float).reshape(-1, 1))
 
             response = jsonify({
                 "statusCode": 200,
                 "status": "Prediction made",
-                "result": "The predicted salary (in dollars) :  "+str(prediction[0].round(2))
+                "result": "The predicted salary for the experience of "+str(data[0])+" years is $"+str(prediction[0].round(2))
             })
             response.headers.add('Access-Control-Allow-Origin', '*')
             return response
